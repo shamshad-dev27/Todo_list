@@ -1,25 +1,27 @@
-
-import { useReducer, useState } from "react"
 import AddTodo from "./components/addTodo/AddTodo"
-import TodoList from "./components/TodoList/TodoList"
-import TodoContext from "./Context/TodoContext"
-import todoDispatchContext from "./Context/todoDispatchContext"
-import todoRecducer from "./TodoReducer/todoReducer"
-
-
+import CustomRoute from "./customRoute/CustomRoute";
+import { useDispatch } from "react-redux";
+import { bindActionCreators } from "redux";
+import { Addtodo,DelTodo,EditTodo,todoFinish } from "./action/todoAction";
+import { Link } from "react-router-dom";
 function App() {
-   // const [list,setlist]=useState([
-   //          {id: 1, todoData: 'todo1',finished:false},
-   //          {id: 2, todoData: 'todo2',finished:false}
-   //      ])
-   const [list, dispatch]=useReducer(todoRecducer,[])
+    
+    const dispatch=useDispatch();
+    const bindAction=bindActionCreators({Addtodo,DelTodo,EditTodo,todoFinish},dispatch)
    return(
-    <TodoContext.Provider value={{list}}>
-      <todoDispatchContext.Provider value={{dispatch}}>
-       <AddTodo/>
-       <TodoList/>
-    </todoDispatchContext.Provider>
-    </TodoContext.Provider>
+    <div className='flex  flex-col justify-center  items-center w-80 rounded-4xl space-y-5 p-6 bg-white shadow '>
+        <h1 className="text-blue-500 tracking-wide font-semibold text-2xl">TASKFLOW</h1>
+       <AddTodo addTodo={bindAction.Addtodo}/>
+          <div className=" space-y-4">
+           <div className=" space-x-2">
+            <Link to="/"className=" px-3 rounded-4xl border-2 border-black hover:scale-[1.02] focus:bg-blue-500">All</Link>
+           <Link to="/completed/" className="  px-3 rounded-4xl border-2 border-black  hover:scale-[1.02] focus:bg-blue-500">completed</Link>
+           <Link to="/Pending/" className="  px-3 rounded-4xl border-2 border-black  hover:scale-[1.02] focus:bg-blue-500">Pending</Link>
+           </div>
+            <CustomRoute/>
+          </div>
+       </div>
+
    )
 }
 

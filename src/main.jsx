@@ -2,6 +2,17 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import { Provider } from 'react-redux'
+import store from './createStores.js'
+import { BrowserRouter } from 'react-router-dom'
 createRoot(document.getElementById('root')).render(
-    <App />
+    <div className='flex justify-center   items-center  h-screen '>
+     <BrowserRouter>
+        <Provider store={store}>
+          <div>
+            <App />
+          </div>
+       </Provider>
+      </BrowserRouter>
+    </div>
 )

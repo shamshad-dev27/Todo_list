@@ -1,4 +1,14 @@
-function todoRecducer(state, action){
+function todoRecducer(state=[
+{id :1, 
+    todoData: 'Write Project Proposal',
+    finished:true},
+    {id :2, 
+    todoData: 'Grocery Shopping',
+    finished:true},
+    {id :3, 
+    todoData: 'Go for a Run',
+    finished:false}
+], action){
  if(action.type=='add_todo'){
  let todoText=action.payload.todoText;
  return [ ...state ,{id :state.length+1, 

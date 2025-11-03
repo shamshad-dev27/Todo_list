@@ -2,7 +2,7 @@ import Todo from "../Todo/Todo"
 import {  useSelector } from "react-redux";
 
 
-function TodoList( {DelTodo,EditTodo,todoFinish}){
+function Completed( {DelTodo,EditTodo,todoFinish}){
 const list=useSelector((state)=>state.todo);
 
 function onFinished(todo,isFinited){
@@ -21,7 +21,8 @@ function onFinished(todo,isFinited){
          }
     return(
         <div className=" space-y-3 pb-5 ">
-        {list.length>0&& list.map(todo=><Todo 
+        {list.length>0&& list.map(todo=>
+        todo.finished == true && <Todo 
         key={todo.id}
         isFinish={todo.finished}
          TodoData={todo.todoData}
@@ -29,8 +30,9 @@ function onFinished(todo,isFinited){
          changeFinish={(isFinited)=>onFinished(todo,isFinited)}
          onDelete={()=> onDelete(todo)}
          onEdit={(EditData)=>onEdit(todo,EditData)}
-         />)}
+         />
+         )}
         </div>
     )
 }
-export default TodoList;
+export default Completed;
