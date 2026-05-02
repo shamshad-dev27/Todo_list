@@ -1,16 +1,125 @@
-# React + Vite
+# ✅ Todo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and responsive task management application built with **React** and **Vite**. This app lets users add, complete, and delete tasks — all with a smooth, fast user interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+>todo-list-zeta-lemon-66.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+>![alt text](image.png)
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| React | UI component rendering |
+| Vite | Fast build tool & dev server |
+| JavaScript (ES6+) | Application logic |
+| CSS | Styling and layout |
+
+---
+
+## ✨ Features
+
+- ➕ Add new tasks instantly
+- ✔️ Mark tasks as complete or incomplete
+- 🗑️ Delete individual tasks
+- 💾 State managed via React hooks
+- ⚡ Lightning-fast development with Vite HMR
+
+---
+
+## 📁 Project Structure
+
+```
+Todo_list/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   └── TodoItem.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+---
+
+## ⚙️ Getting Started
+
+Follow these steps to run the project on your local machine:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/shamshad-dev27/Todo_list.git
+cd Todo_list
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
+
+```bash
+npm run dev
+```
+
+Then open your browser and go to: `http://localhost:5173`
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+The optimized output will be in the `dist/` folder.
+
+---
+
+## 🧹 Lint the Code
+
+```bash
+npm run lint
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork this repository
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m "Add your feature"`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a Pull Request
+
+---
+
+## 👨‍💻 Author
+
+**Shamshad**
+- GitHub: [@shamshad-dev27](https://github.com/shamshad-dev27)
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
