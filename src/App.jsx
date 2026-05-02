@@ -15,7 +15,7 @@ function App() {
           <div className=" space-y-4">
            <div className=" space-x-2">
             <Link to="/"className=" px-3 rounded-4xl border-2 border-black hover:scale-[1.02] focus:bg-blue-500">All</Link>
-           <Link to="/completed/" className="  px-3 rounded-4xl border-2 border-black  hover:scale-[1.02] focus:bg-blue-500">completed</Link>
+           <Link to="/completed/" className="  px-3 rounded-4xl border-2 border-black  hover:scale-[1.02] focus:bg-blue-500">Completed</Link>
            <Link to="/Pending/" className="  px-3 rounded-4xl border-2 border-black  hover:scale-[1.02] focus:bg-blue-500">Pending</Link>
            </div>
             <CustomRoute/>
